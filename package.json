@@ -1,0 +1,24 @@
+{
+  "name": "stylelint-config-cotd",
+  "version": "0.0.1",
+  "description": "Sharable stylelint config by CatchOfTheDay",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cahamilton/stylelint-config-cotd.git"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "stylelint-config-cotd",
+    "catch-of-the-day",
+    "cotd",
+    "css"
+  ],
+  "author": "Carl Hamilton <carlanthonyhamilton@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cahamilton/stylelint-config-cotd/issues"
+  },
+  "homepage": "https://github.com/cahamilton/stylelint-config-cotd#readme"
+}
