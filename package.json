@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Sharable stylelint config by CatchOfTheDay",
   "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cahamilton/stylelint-config-cotd.git"
@@ -20,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/cahamilton/stylelint-config-cotd/issues"
   },
-  "homepage": "https://github.com/cahamilton/stylelint-config-cotd#readme"
+  "homepage": "https://github.com/cahamilton/stylelint-config-cotd#readme",
+  "devDependencies": {
+    "eslint": "^3.6.1",
+    "eslint-config-stylelint": "^5.0.0"
+  }
 }
