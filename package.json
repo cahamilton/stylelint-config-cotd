@@ -4,7 +4,9 @@
   "description": "Sharable stylelint config by CatchOfTheDay",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ."
+    "ava": "ava --verbose \"tests/**/*.js\"",
+    "lint": "eslint .",
+    "test": "npm run lint && npm run ava"
   },
   "repository": {
     "type": "git",
@@ -24,8 +26,16 @@
     "url": "https://github.com/cahamilton/stylelint-config-cotd/issues"
   },
   "homepage": "https://github.com/cahamilton/stylelint-config-cotd#readme",
+  "dependencies": {
+    "stylelint-scss": "^1.3.4"
+  },
   "devDependencies": {
+    "ava": "^0.16.0",
     "eslint": "^3.6.1",
-    "eslint-config-stylelint": "^5.0.0"
+    "eslint-config-stylelint": "^5.0.0",
+    "stylelint": "^7.3.1"
+  },
+  "peerDependencies": {
+    "stylelint": "^7.3.1"
   }
 }
