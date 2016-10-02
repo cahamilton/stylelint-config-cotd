@@ -1,0 +1,6 @@
+/node_modules/
+/tests/
+/.editorconfig
+/.eslintrc
+/.gitattributes
+/.gitignore
