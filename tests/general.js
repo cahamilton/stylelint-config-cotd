@@ -2,21 +2,19 @@ import config from "../"
 import stylelint from "stylelint"
 import test from "ava"
 
-const valid = (
-`
-.indentation {
+const valid = (`
+.valid {
     color: #f00;
 }
 `)
 
-const invalid = (
-`
-.indentation {
-  color: #f00
+const invalid = (`
+.invalid {
+  color: #f00;
 }
 `)
 
-test("no warnings with valid css", t => {
+test("valid", t => {
   return stylelint.lint({
     code: valid,
     config: config,
@@ -29,7 +27,7 @@ test("no warnings with valid css", t => {
   })
 })
 
-test("a warning with invalid css", t => {
+test("invalid", t => {
   return stylelint.lint({
     code: invalid,
     config: config,
@@ -38,7 +36,7 @@ test("a warning with invalid css", t => {
     const { errored, results } = data
     const { warnings } = results[0]
     t.truthy(errored, "Errors")
-    t.is(warnings.length, 1, "One warning")
+    t.is(warnings.length, 1, "1 warning")
     t.is(warnings[0].text, "Expected indentation of 4 spaces (indentation)")
   })
 })
