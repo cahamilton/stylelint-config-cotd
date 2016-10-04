@@ -11,5 +11,6 @@ module.exports = {
     "font-weight-notation": "numeric",
     "indentation": 4,
     "max-empty-lines": 2,
+    "max-line-length": 100,
   },
 }
