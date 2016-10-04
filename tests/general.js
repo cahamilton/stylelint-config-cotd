@@ -11,6 +11,7 @@ const valid = (`
     color: #f00;
     background: #00f;
     display: inline-block;
+    white-space: normal;
 
 
     font-weight: 700;
@@ -34,6 +35,7 @@ const invalid = (`
     background: #00f;
     _display: inline;
     *display: inline-block;
+    white-space: inherit;                
 
 
 
@@ -65,12 +67,13 @@ test("invalid", t => {
     const { errored, results } = data
     const { warnings } = results[0]
     t.truthy(errored, "Errors")
-    t.is(warnings.length, 6, "6 warnings")
+    t.is(warnings.length, 7, "7 warnings")
     t.is(warnings[0].text, "Expected indentation of 4 spaces (indentation)")
     t.is(warnings[1].text, "Expected no more than 2 empty line(s) (max-empty-lines)")
     t.is(warnings[2].text, "Expected line length to be no more than 100 characters (max-line-length)")
     t.is(warnings[3].text, "Expected nesting depth to be no more than 3 (max-nesting-depth)")
     t.is(warnings[4].text, "Unexpected property hack \"*display\" (no-browser-hacks)")
     t.is(warnings[5].text, "Unexpected property hack \"_display\" (no-browser-hacks)")
+    t.is(warnings[6].text, "Unexpected whitespace at end of line (no-eol-whitespace)")
   })
 })

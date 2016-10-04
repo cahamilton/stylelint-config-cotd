@@ -14,5 +14,6 @@ module.exports = {
     "max-line-length": 100,
     "max-nesting-depth": 3,
     "no-browser-hacks": true,
+    "no-eol-whitespace": true,
   },
 }
