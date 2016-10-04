@@ -13,6 +13,14 @@ const valid = (`
 
 
     font-weight: 700;
+    
+    .one {
+        .two {
+            .three {
+                font-size: 4em;
+            }
+        }
+    }
 }
 `)
 
@@ -27,6 +35,8 @@ const invalid = (`
 
 
     font-weight: 700;
+    
+    .one { .two { .three { .four { font-size: 5em; } } } }
 }
 `)
 
@@ -52,9 +62,10 @@ test("invalid", t => {
     const { errored, results } = data
     const { warnings } = results[0]
     t.truthy(errored, "Errors")
-    t.is(warnings.length, 3, "3 warnings")
+    t.is(warnings.length, 4, "4 warnings")
     t.is(warnings[0].text, "Expected indentation of 4 spaces (indentation)")
     t.is(warnings[1].text, "Expected no more than 2 empty line(s) (max-empty-lines)")
     t.is(warnings[2].text, "Expected line length to be no more than 100 characters (max-line-length)")
+    t.is(warnings[3].text, "Expected nesting depth to be no more than 3 (max-nesting-depth)")
   })
 })

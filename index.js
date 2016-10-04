@@ -12,5 +12,6 @@ module.exports = {
     "indentation": 4,
     "max-empty-lines": 2,
     "max-line-length": 100,
+    "max-nesting-depth": 3,
   },
 }
