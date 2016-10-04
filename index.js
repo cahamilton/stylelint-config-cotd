@@ -10,5 +10,6 @@ module.exports = {
     "font-family-name-quotes": "always-unless-keyword",
     "font-weight-notation": "numeric",
     "indentation": 4,
+    "max-empty-lines": 2,
   },
 }

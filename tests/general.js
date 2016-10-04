@@ -5,12 +5,21 @@ import test from "ava"
 const valid = (`
 .valid {
     color: #f00;
+    background: #00f;
+
+
+    font-weight: 700;
 }
 `)
 
 const invalid = (`
 .invalid {
   color: #f00;
+    background: #00f;
+
+
+
+    font-weight: 700;
 }
 `)
 
@@ -36,7 +45,8 @@ test("invalid", t => {
     const { errored, results } = data
     const { warnings } = results[0]
     t.truthy(errored, "Errors")
-    t.is(warnings.length, 1, "1 warning")
+    t.is(warnings.length, 2, "2 warnings")
     t.is(warnings[0].text, "Expected indentation of 4 spaces (indentation)")
+    t.is(warnings[1].text, "Expected no more than 2 empty line(s) (max-empty-lines)")
   })
 })
