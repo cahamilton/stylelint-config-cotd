@@ -16,5 +16,6 @@ module.exports = {
     "no-browser-hacks": true,
     "no-eol-whitespace": true,
     "no-duplicate-selectors": true,
+    "no-empty-source": true,
   },
 }

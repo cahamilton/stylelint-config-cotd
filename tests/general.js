@@ -88,3 +88,17 @@ test("invalid", t => {
     t.is(warnings[7].text, "Unexpected duplicate selector \".nope\" (no-duplicate-selectors)")
   })
 })
+
+test("invalid (no-empty-source)", t => {
+  return stylelint.lint({
+    code: "",
+    config: config,
+  })
+  .then(data => {
+    const { errored, results } = data
+    const { warnings } = results[0]
+    t.truthy(errored, "Errors")
+    t.is(warnings.length, 1, "1 warning")
+    t.is(warnings[0].text, "Unexpected empty source (no-empty-source)")
+  })
+})
