@@ -3,10 +3,10 @@ import stylelint from "stylelint"
 import test from "ava"
 
 const valid = (`
-// 
-// Ipsum cillum veniam nostrud commodo exercitation. Irure veniam exercitation deserunt id do. 
+//
+// Ipsum cillum veniam nostrud commodo exercitation. Irure veniam exercitation deserunt id do.
 // Occaecat amet ex ex tempor Lorem reprehenderit non occaecat
-// 
+//
 .valid {
     color: #f00;
     background: #00f;
@@ -15,7 +15,7 @@ const valid = (`
 
 
     font-weight: 700;
-    
+
     .one {
         .two {
             .three {
@@ -24,10 +24,14 @@ const valid = (`
         }
     }
 }
+
+.yup {
+    color: #000;
+}
 `)
 
 const invalid = (`
-// 
+//
 // Ipsum cillum veniam nostrud commodo exercitation. Irure veniam exercitation deserunt id do. Occaecat amet ex ex tempor Lorem reprehenderit non occaecat
 //
 .invalid {
@@ -40,8 +44,14 @@ const invalid = (`
 
 
     font-weight: 700;
-    
+
     .one { .two { .three { .four { font-size: 5em; } } } }
+}
+
+.nope { color: #000; }
+
+.nope {
+    color: #fff;
 }
 `)
 
@@ -67,7 +77,7 @@ test("invalid", t => {
     const { errored, results } = data
     const { warnings } = results[0]
     t.truthy(errored, "Errors")
-    t.is(warnings.length, 7, "7 warnings")
+    t.is(warnings.length, 8, "8 warnings")
     t.is(warnings[0].text, "Expected indentation of 4 spaces (indentation)")
     t.is(warnings[1].text, "Expected no more than 2 empty line(s) (max-empty-lines)")
     t.is(warnings[2].text, "Expected line length to be no more than 100 characters (max-line-length)")
@@ -75,5 +85,6 @@ test("invalid", t => {
     t.is(warnings[4].text, "Unexpected property hack \"*display\" (no-browser-hacks)")
     t.is(warnings[5].text, "Unexpected property hack \"_display\" (no-browser-hacks)")
     t.is(warnings[6].text, "Unexpected whitespace at end of line (no-eol-whitespace)")
+    t.is(warnings[7].text, "Unexpected duplicate selector \".nope\" (no-duplicate-selectors)")
   })
 })

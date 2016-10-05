@@ -15,5 +15,6 @@ module.exports = {
     "max-nesting-depth": 3,
     "no-browser-hacks": true,
     "no-eol-whitespace": true,
+    "no-duplicate-selectors": true,
   },
 }
