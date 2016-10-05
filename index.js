@@ -17,5 +17,6 @@ module.exports = {
     "no-eol-whitespace": true,
     "no-duplicate-selectors": true,
     "no-empty-source": true,
+    "no-extra-semicolons": true,
   },
 }

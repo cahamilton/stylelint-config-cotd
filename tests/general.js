@@ -51,7 +51,7 @@ const invalid = (`
 .nope { color: #000; }
 
 .nope {
-    color: #fff;
+    color: #fff;;
 }
 `)
 
@@ -77,7 +77,7 @@ test("invalid", t => {
     const { errored, results } = data
     const { warnings } = results[0]
     t.truthy(errored, "Errors")
-    t.is(warnings.length, 8, "8 warnings")
+    t.is(warnings.length, 9, "9 warnings")
     t.is(warnings[0].text, "Expected indentation of 4 spaces (indentation)")
     t.is(warnings[1].text, "Expected no more than 2 empty line(s) (max-empty-lines)")
     t.is(warnings[2].text, "Expected line length to be no more than 100 characters (max-line-length)")
@@ -86,6 +86,7 @@ test("invalid", t => {
     t.is(warnings[5].text, "Unexpected property hack \"_display\" (no-browser-hacks)")
     t.is(warnings[6].text, "Unexpected whitespace at end of line (no-eol-whitespace)")
     t.is(warnings[7].text, "Unexpected duplicate selector \".nope\" (no-duplicate-selectors)")
+    t.is(warnings[8].text, "Unexpected extra semicolon (no-extra-semicolons)")
   })
 })
 
