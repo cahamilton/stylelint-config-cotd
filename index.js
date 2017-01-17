@@ -2,6 +2,9 @@ module.exports = {
   "plugins": [
     "stylelint-scss",
   ],
+  "extends": [
+    "stylelint-config-property-sort-order-smacss",
+  ],
   "rules": {
     "color-hex-case": "lower",
     "color-hex-length": "short",
