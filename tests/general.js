@@ -1,3 +1,5 @@
+"use strict"
+
 import config from "../"
 import stylelint from "stylelint"
 import test from "ava"
