@@ -41,7 +41,7 @@ module.exports = {
 
     // String //
     "string-no-newline": true,
-    "string-quotes": "single",
+    "string-quotes": "double",
 
     // Length //
     "length-zero-no-unit": true,
