@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-cotd",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Sharable stylelint config by CatchOfTheDay",
   "main": "index.js",
   "scripts": {
