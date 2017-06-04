@@ -1,3 +1,6 @@
 {
-  "extends": "stylelint"
+  "extends": "stylelint",
+  "parserOptions": {
+    "sourceType": "module"
+  }
 }

@@ -1,5 +1,5 @@
-import config from "../"
 import stylelint from "stylelint"
+import stylelintConfig from "../"
 import test from "ava"
 
 const valid = (`
@@ -23,7 +23,7 @@ const invalid = (`
 test("valid", t => {
   return stylelint.lint({
     code: valid,
-    config: config,
+    config: stylelintConfig,
   })
   .then(data => {
     const { errored, results } = data
@@ -36,7 +36,7 @@ test("valid", t => {
 test("invalid", t => {
   return stylelint.lint({
     code: invalid,
-    config: config,
+    config: stylelintConfig,
   })
   .then(data => {
     const { errored, results } = data

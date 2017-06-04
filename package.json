@@ -6,7 +6,7 @@
   "scripts": {
     "ava": "ava --verbose \"tests/**/*.js\"",
     "lint": "eslint .",
-    "test": "npm run lint && npm run ava"
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
