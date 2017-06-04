@@ -1,5 +1,3 @@
-"use strict"
-
 import stylelint from "stylelint"
 import stylelintConfig from "../"
 import test from "ava"
