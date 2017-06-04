@@ -189,5 +189,63 @@ module.exports = {
     "no-invalid-double-slash-comments": true,
     "no-missing-end-of-source-newline": true,
     "no-unknown-animations": true,
+
+    // scss - @-else //
+    "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
+    "scss/at-else-empty-line-before": "never",
+
+    // scss - @-extend //
+    "scss/at-extend-no-missing-placeholder": true,
+
+    // scss - @-function //
+    "scss/at-function-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+
+    // scss - @-if //
+    "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
+
+    // scss - @-import //
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/at-import-partial-extension-blacklist": [ "scss", "sass", "css" ],
+
+    // scss - @-mixin //
+    "scss/at-mixin-argumentless-call-parentheses": "always",
+    "scss/at-mixin-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+
+    // scss - $-variable //
+    "scss/dollar-variable-colon-newline-after": "always-multi-line",
+    "scss/dollar-variable-colon-space-after": "always-single-line",
+    "scss/dollar-variable-colon-space-before": "never",
+    "scss/dollar-variable-empty-line-before": [ "always", {
+      except: [ "first-nested", "after-comment", "after-dollar-variable" ],
+      ignore: ["after-comment"],
+    } ],
+    "scss/dollar-variable-no-missing-interpolation": true,
+    "scss/dollar-variable-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+
+    // scss - %-placeholder //
+    "scss/percent-placeholder-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+
+    // scss - //-comment //
+    "scss/double-slash-comment-empty-line-before": [ "always", {
+      except: ["first-nested"],
+      ignore: ["between-comments"],
+    } ],
+    "scss/double-slash-comment-whitespace-inside": "always",
+
+    // scss - Declaration //
+    "scss/declaration-nested-properties": "never",
+    "scss/declaration-nested-properties-no-divided-groups": true,
+
+    // scss - Media feature //
+    "scss/media-feature-value-dollar-variable": "always",
+
+    // scss - Operator //
+    "scss/operator-no-newline-after": true,
+    "scss/operator-no-newline-before": true,
+    "scss/operator-no-unspaced": true,
+
+    // scss - Selector //
+    "scss/selector-no-redundant-nesting-selector": true,
+
   },
 }
