@@ -34,9 +34,9 @@
     "ava": "^0.19.1",
     "eslint": "^3.19.0",
     "eslint-config-stylelint": "^6.0.0",
-    "stylelint": "^8.0.0"
+    "stylelint": "^9.0.0"
   },
   "peerDependencies": {
-    "stylelint": "^8.0.0"
+    "stylelint": "^9.0.0"
   }
 }
