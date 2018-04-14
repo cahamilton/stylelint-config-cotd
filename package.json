@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "ava": "^0.19.1",
-    "eslint": "^3.19.0",
-    "eslint-config-stylelint": "^6.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-stylelint": "^8.1.0",
     "stylelint": "^9.0.0"
   },
   "peerDependencies": {
