@@ -4,7 +4,6 @@
   "description": "Sharable stylelint config by CatchOfTheDay",
   "main": "index.js",
   "scripts": {
-    "ava": "ava --verbose \"tests/**/*.js\"",
     "lint": "eslint .",
     "test": "npm run lint"
   },
@@ -31,7 +30,6 @@
     "stylelint-scss": "^1.4.4"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
     "eslint": "^4.19.1",
     "eslint-config-stylelint": "^8.1.0",
     "stylelint": "^9.0.0"
